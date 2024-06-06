@@ -1,0 +1,8 @@
+@import '../../styles/functions';
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: adapt(4px, 375px) 0px;
+}
