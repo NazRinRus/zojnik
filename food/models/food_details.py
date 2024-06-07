@@ -38,8 +38,8 @@ class Antitag(models.Model):
     is_active = models.BooleanField("Тэг активен", default=True)
 
     class Meta:
-        verbose_name = 'Тэг'
-        verbose_name_plural = 'Тэги'
+        verbose_name = 'Антитэг'
+        verbose_name_plural = 'Антитэги'
         ordering = ('name',)
 
     def __str__(self):

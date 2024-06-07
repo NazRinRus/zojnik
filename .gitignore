@@ -164,3 +164,4 @@ cython_debug/
 /api/migrations/
 /common/migrations/
 /venv_zojnik/
+/users/migrations/
