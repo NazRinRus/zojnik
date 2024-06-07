@@ -48,6 +48,7 @@ INSTALLED_APPS += [
 INSTALLED_APPS += [
     'api',
     'common',
+    'food',
 ]
 
 MIDDLEWARE = [
