@@ -4,14 +4,14 @@ import Content from '../../content/Content';
 import Header from '../../header/Header';
 import Layout from '../../layout/Layout';
 
-const Home = () => {
+const Constructor = () => {
 	return (
 		<Layout>
-			<Header />
+			<Header title='Тарелка по Методу' />
 			<Content />
 			<InterfaceApp />
 		</Layout>
 	);
 };
 
-export default Home;
+export default Constructor;

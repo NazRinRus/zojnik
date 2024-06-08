@@ -1,0 +1,7 @@
+@import '../../styles/functions';
+
+.block__content {
+	display: flex;
+	flex-direction: column;
+	gap: adapt(16px, 375px);
+}
