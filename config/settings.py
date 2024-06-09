@@ -174,7 +174,7 @@ REST_FRAMEWORK = {
 # DRF SPECTACULAR ######################
 ########################################
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'GlazGo API',
+    'TITLE': 'Zojnik API',
         'DESCRIPTION': 'Your project description',
     'VERSION': '1.0.0',
 
