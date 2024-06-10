@@ -1,49 +1,28 @@
 from django.db import models
+from common.models.mixins import BaseDictModelMixin
 
 def get_image_path(instance, file): # прописываю путь сохранения изображений, у каждого продукта своя папка
     return f'static/photos/food_img-{Food.objects.count()+1}/{file}'
 
-class FoodCategory(models.Model):
-    code = models.CharField('Код', max_length=3, primary_key=True)
-    name = models.CharField("Наименование категории", max_length=30, null=False)
-    sort = models.PositiveSmallIntegerField('Сортировка', null=True, blank=True)
-    is_active = models.BooleanField("Категория активна", default=True)
+class FoodCategory(BaseDictModelMixin):
 
     class Meta:
         verbose_name = 'Категория блюда'
         verbose_name_plural = 'Категории блюд'
-        ordering = ('name',)
 
-    def __str__(self):
-        return f'{self.name} ({self.code})'
 
-class Tag(models.Model):
-    code = models.CharField('Код', max_length=3, primary_key=True)
-    name = models.CharField("Название тэга", max_length=30, null=False)
-    sort = models.PositiveSmallIntegerField('Сортировка', null=True, blank=True)
-    is_active = models.BooleanField("Тэг активен", default=True)
+class Tag(BaseDictModelMixin):
 
     class Meta:
         verbose_name = 'Тэг'
         verbose_name_plural = 'Тэги'
-        ordering = ('name',)
 
-    def __str__(self):
-        return f'{self.name} ({self.code})'
 
-class Antitag(models.Model):
-    code = models.CharField('Код', max_length=3, primary_key=True)
-    name = models.CharField("Название тэга", max_length=30, null=False)
-    sort = models.PositiveSmallIntegerField('Сортировка', null=True, blank=True)
-    is_active = models.BooleanField("Тэг активен", default=True)
+class Antitag(BaseDictModelMixin):
 
     class Meta:
         verbose_name = 'Антитэг'
         verbose_name_plural = 'Антитэги'
-        ordering = ('name',)
-
-    def __str__(self):
-        return f'{self.name} ({self.code})'
 
 
 class Food(models.Model):
