@@ -1,5 +1,8 @@
 from django.db import models
 from common.models.mixins import BaseDictModelMixin
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
 
 def get_image_path(instance, file): # прописываю путь сохранения изображений, у каждого продукта своя папка
     return f'static/photos/food_img-{Food.objects.count()+1}/{file}'
@@ -33,6 +36,8 @@ class Food(models.Model):
     carbohydrates = models.FloatField("Углеводы", null=True)
     allergen = models.BooleanField("Содержит аллергены", default=True)
     other = models.TextField("Описание", null=True)
+    price = models.FloatField("Цена", null=True)
+    rating = models.FloatField("Рейтинг", null=True)
     category = models.ForeignKey(
         'FoodCategory', models.RESTRICT, 'food_category', verbose_name='Категория блюда'
     )
@@ -84,3 +89,37 @@ class FoodAntitag(models.Model):
 
     def __str__(self):
         return f'({self.pk}) {self.antitag_id}'
+
+class FoodRating(models.Model):
+    rating = models.SmallIntegerField("Рейтинг", null=True)
+    food_id = models.ForeignKey(
+        Food, models.PROTECT, 'food_rating', verbose_name='ID блюда'
+    )
+    user_id = models.ForeignKey(
+        User, models.PROTECT, 'user_rating', verbose_name='ID пользователя'
+    )
+
+    class Meta:
+        verbose_name = 'Сводная таблица рейтинга блюда и пользователя'
+        verbose_name_plural = 'Сводные таблицы рейтинга блюд и пользователей'
+        ordering = ('user_id', 'food_id',)
+
+    def __str__(self):
+        return f'({self.pk}) {self.food_id} {self.user_id} {self.rating}'
+
+class FoodComment(models.Model):
+    comment = models.TextField("Комментарий", null=True, blank=True)
+    food_id = models.ForeignKey(
+        Food, models.PROTECT, 'food_comment', verbose_name='ID блюда'
+    )
+    user_id = models.ForeignKey(
+        User, models.PROTECT, 'user_comment', verbose_name='ID пользователя'
+    )
+
+    class Meta:
+        verbose_name = 'Сводная таблица комментариев блюда и пользователя'
+        verbose_name_plural = 'Сводные таблицы комментариев блюд и пользователей'
+        ordering = ('user_id', 'food_id',)
+
+    def __str__(self):
+        return f'({self.pk}) {self.food_id} {self.user_id} {self.comment}'
