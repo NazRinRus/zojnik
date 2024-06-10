@@ -16,12 +16,10 @@ const Welcome = () => {
 				Начните свой ЗОЖ-путь сегодня!
 			</h1>
 			<p className={styles.welcome__text}>
-				Заполните
-				<Link className={styles.welcome__link}>АНКЕТУ ПРЕДПОЧТЕНИЙ,</Link> чтобы
-				получить подборку блюд, идеально подходящих для вас
+				Заполните <Link className={styles.welcome__link}>АНКЕТУ ПРЕДПОЧТЕНИЙ,</Link> чтобы получить подборку блюд, идеально подходящих для вас
 			</p>
 			<Link to='/' className={styles.welcome__button}>
-				Подробнее
+				Продолжить
 			</Link>
 		</Layout>
 	);
