@@ -1,28 +1,28 @@
 from drf_spectacular.utils import extend_schema_view, extend_schema
-from rest_framework.generics import RetrieveUpdateAPIView
 from food.models.food_details import Food
 from food.serializers import food_details
-from common.views.mixins import ListViewSet
+from common.views.mixins import LCRUViewSet
 
-
-@extend_schema_view(
-    get=extend_schema(summary='Блюдо', tags=['Блюда']),
-    put=extend_schema(summary='Редактировать блюдо', tags=['Блюда']),
-    patch=extend_schema(summary='Редактировать частично', tags=['Блюда']),
-)
-class FoodView(RetrieveUpdateAPIView):
-    queryset = Food.objects.all()
-    serializer_class = food_details.FoodSerializer
-    http_method_names = ('get', 'patch')
-
-    def get_serializer_class(self):
-        if self.request.method in ['PUT', 'PATCH']:
-            return food_details.FoodSerializer
-        return food_details.FoodSerializer
 
 @extend_schema_view(
     list=extend_schema(summary='Список блюд', tags=['Блюда']),
+    retrieve=extend_schema(summary='Блюдо детально', tags=['Блюда']),
+    create=extend_schema(summary='Создать блюдо', tags=['Блюда']),
+    update=extend_schema(summary='Изменить блюдо', tags=['Блюда']),
+    partial_update=extend_schema(summary='Изменить блюдо частично', tags=['Блюда']),
 )
-class FoodListView(ListViewSet):
+class FoodView(LCRUViewSet):
     queryset = Food.objects.all()
-    serializer_class = food_details.FoodSerializer
+    serializer_class = food_details.FoodCreateSerializer
+
+    multi_serializer_class = {
+        'list': food_details.FoodCreateSerializer,
+        'retrieve': food_details.FoodRetrieveSerializer,
+        'create': food_details.FoodCreateSerializer,
+        'update': food_details.FoodUpdateSerializer,
+        'partial_update': food_details.FoodUpdateSerializer,
+    }
+
+    http_method_names = ('get', 'post', 'patch')
+
+
