@@ -1,0 +1,33 @@
+@import '../../../styles/variables';
+@import '../../../styles/functions';
+@import '../../../styles/fonts';
+
+.buttons_wrapper_profile {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.button_profile {
+  border-radius: adapt(16px, 375px);
+  background-color: $color-grey-button;
+  padding: adapt(8px, 375px) 0 adapt(8px, 375px) adapt(8px, 375px);
+}
+
+.button_profile__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 17px;
+  color: $color-black-text;
+  font-family: 'SF-Pro-Display-Regular';
+}
+
+.button_profile__text {
+  flex-grow: 1;
+}
+
+.button_profile__text_logout {
+  color: red;
+}
+
