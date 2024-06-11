@@ -2,48 +2,47 @@
 @import '../../../styles/functions';
 
 .welcome__button {
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $color-green-standart;
-  width: adapt(343px, 375px);
-  height: adapt(56px, 375px);
-  border-radius: adapt(16px, 375px);
-  color: #fff;
-  font-size: 1.0625rem;
-  font-weight: 590;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $color-green-standart;
+	width: adapt(343px, 375px);
+	height: adapt(56px, 375px);
+	border-radius: adapt(16px, 375px);
+	color: #fff;
+	font-size: 1.0625rem;
+	font-weight: 590;
 }
 
 .welcome__button:active {
-background-color: $color-green-hover;
+	background-color: $color-green-hover;
 }
 
 .welcome__background {
-  margin: 0 adapt(-16px, 375px);
-  margin-top: adapt(-18px, 375px);
-  width: adapt(375px, 375px);
+	margin: 0 adapt(-16px, 375px);
+	margin-top: adapt(-18px, 375px);
+	width: adapt(375px, 375px);
 }
 
 .welcome__heading {
-  margin-top: adapt(15px, 375px);
-  font-family: 'SF-Pro-Display-Semibold';
-  font-size: 1.75rem;
-  color: $color-black-text;
+	margin-top: adapt(15px, 375px);
+	font-family: 'SF-Pro-Display-Semibold';
+	font-size: 1.75rem;
+	color: $color-black-text;
 }
 
 .welcome__text {
-  font-family: 'SF-Pro-Display-Regular';
-  margin-bottom: adapt(20px, 375px);
-  margin-top: adapt(8px, 375px);
-  font-size: 1.0625rem;
-  color: $color-black-light;
-  line-height: adapt(23px, 375px);
-  width: adapt(340px, 375px);
+	font-family: 'SF-Pro-Display-Regular';
+	margin-bottom: adapt(20px, 375px);
+	margin-top: adapt(8px, 375px);
+	font-size: 1.0625rem;
+	color: $color-black-light;
+	line-height: adapt(23px, 375px);
+	width: adapt(340px, 375px);
 }
 
 .welcome__link {
-  font-family: 'SF-Pro-Display-Semibold';
-  text-decoration: underline;
-  color: $color-green-standart;
+	font-family: 'SF-Pro-Display-Semibold';
+	text-decoration: underline;
+	color: $color-green-standart;
 }
