@@ -45,6 +45,8 @@ class RegistrationSerializer(serializers.ModelSerializer):
             'id',
             'first_name',
             'last_name',
+            'username',
+            'phone_number',
             'email',
             'password',
         )
