@@ -66,9 +66,11 @@ class MeView(RetrieveUpdateAPIView):
     list=extend_schema(summary='Список пользователей Search', tags=['Словари']),
 )
 class UserListSearchView(ListViewSet):
-    queryset = User.objects.exclude(
-        Q(is_superuser=True) #| Q(is_corporate_account=True)
-    )
+    queryset = User.objects.all()
+    # только пользователи, без администраторов и сотрудников
+    # queryset = User.objects.exclude(
+    #     Q(is_superuser=True) | Q(is_corporate_account=True)
+    # )
     serializer_class = user_s.UserSearchListSerializer
     filter_backends = (
         SearchFilter,
