@@ -3,22 +3,13 @@ from rest_framework import serializers
 from common.serializers.mixins import InfoModelSerializer, ExtendedModelSerializer
 from food.models.food_details import Food
 
-class FoodSerializer(serializers.ModelSerializer):
+class FoodShortSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Food
         fields = (
             'id',
             'name',
-            'calories',
-            'protein',
-            'fat',
-            'carbohydrates',
-            'allergen',
-            'other',
-            'price',
-            'rating',
-            'avatar',
         )
 class FoodListSerializer(InfoModelSerializer):
 
@@ -37,6 +28,7 @@ class FoodListSerializer(InfoModelSerializer):
             'rating',
             'avatar',
             'category',
+            'rating',
         )
 
 class FoodRetrieveSerializer(InfoModelSerializer):
@@ -56,6 +48,7 @@ class FoodRetrieveSerializer(InfoModelSerializer):
             'rating',
             'avatar',
             'category',
+            'rating',
         )
 
 class FoodCreateSerializer(ExtendedModelSerializer):
