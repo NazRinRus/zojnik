@@ -8,7 +8,7 @@ const Slider = () => {
 		<div className={styles.block__slider}>
 			{categoryFood.map(elem => (
 				<Link key={elem.id} className={styles.block__category}>
-					{/* <img src="" alt="" /> */}
+					<img src={elem.src} alt={elem.title} />
 					<p>{elem.title}</p>
 				</Link>
 			))}

@@ -2,8 +2,8 @@
 @import '../../../styles/functions';
 
 .block__interface {
-	position: absolute;
-	bottom: 3%;
+	position: fixed;
+	bottom: adapt(20px, 375px);
 	background-color: $color-green-standart;
 	padding: adapt(8px, 375px) adapt(16px, 375px);
 	border-radius: adapt(20px, 375px);
