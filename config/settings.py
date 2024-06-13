@@ -185,7 +185,7 @@ SPECTACULAR_SETTINGS = {
         'rest_framework.permissions.IsAuthenticated'],
 
     'SERVE_AUTHENTICATION': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication', #закоментировал, чтобы была возможность пользоваться документацией по логину и паролю
+#        'rest_framework_simplejwt.authentication.JWTAuthentication', #закоментировал, чтобы была возможность пользоваться документацией по логину и паролю
         'rest_framework.authentication.BasicAuthentication',
     ],
 
