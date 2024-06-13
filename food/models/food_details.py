@@ -91,7 +91,7 @@ class FoodAntitag(models.Model):
         return f'({self.pk}) {self.antitag_id}'
 
 class FoodRating(models.Model):
-    rating = models.SmallIntegerField("Рейтинг", null=True)
+    rating = models.SmallIntegerField("Рейтинг", default=5)
     food_id = models.ForeignKey(
         Food, models.PROTECT, 'food_rating', verbose_name='ID блюда'
     )
