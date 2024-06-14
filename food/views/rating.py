@@ -1,7 +1,8 @@
 from drf_spectacular.utils import extend_schema_view, extend_schema
 from food.models.food_details import FoodRating
 from food.serializers import rating
-from common.views.mixins import LCRUDViewSet
+from common.views.mixins import LCRUDViewSet, ExtendedGenericViewSet
+from rest_framework import mixins
 
 
 @extend_schema_view(
@@ -33,7 +34,6 @@ class RatingView(LCRUDViewSet):
             'user_id',
         ).prefetch_related(
             'food_id',
-        )
+        ).filter(food_id= self.kwargs.get('pk'))
+
         return qs
-
-
