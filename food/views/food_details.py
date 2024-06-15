@@ -25,4 +25,26 @@ class FoodView(LCRUViewSet):
 
     http_method_names = ('get', 'post', 'patch')
 
+    def get_queryset(self):
+        if ('tags' in self.request.GET) and ('antitags' in self.request.GET):
+            tags = self.request.GET['tags'].split('%')
+            antitags = self.request.GET['antitags'].split('%')
+            qs = Food.objects.prefetch_related(
+                'tag',
+                'antitag',
+            ).filter(tag__name__in=tags).exclude(antitag__name__in=antitags)
+        elif 'tags' in self.request.GET:
+            tags = self.request.GET['tags'].split('%')
+            qs = Food.objects.prefetch_related(
+                'tag',
+            ).filter(tag__name__in=tags)
+        elif 'antitags' in self.request.GET:
+            antitags = self.request.GET['antitags'].split('%')
+            qs = Food.objects.prefetch_related(
+                'antitag',
+            ).exclude(antitag__name__in=antitags)
+        else:
+            qs = Food.objects.all()
+        return qs
+
 

@@ -139,4 +139,54 @@ INSERT INTO public.food_foodrating (rating, food_id_id, user_id_id) VALUES (3, 6
 INSERT INTO public.food_foodrating (rating, food_id_id, user_id_id) VALUES (4, 7, 1);
 INSERT INTO public.food_foodrating (rating, food_id_id, user_id_id) VALUES (5, 8, 2);
 
+INSERT INTO public.food_tag (code, name, sort, is_active) VALUES ('MEAT', 'Мясо', 10, True);
+INSERT INTO public.food_tag (code, name, sort, is_active) VALUES ('SIDE_DISH', 'Гарнир', 20, True);
+INSERT INTO public.food_tag (code, name, sort, is_active) VALUES ('VEGETABLES', 'Овощи', 30, True);
+INSERT INTO public.food_tag (code, name, sort, is_active) VALUES ('POULTRY', 'Птица', 40, True);
+INSERT INTO public.food_tag (code, name, sort, is_active) VALUES ('FISH', 'Рыба', 50, True);
+
+INSERT INTO public.food_antitag (code, name, sort, is_active) VALUES ('SESAME SEEDS', 'Семена кунжута', 10, True);
+INSERT INTO public.food_antitag (code, name, sort, is_active) VALUES ('TURMERIC', 'Куркума', 20, True);
+INSERT INTO public.food_antitag (code, name, sort, is_active) VALUES ('WALNUTS', 'Грецкие орехи', 30, True);
+INSERT INTO public.food_antitag (code, name, sort, is_active) VALUES ('EGGS', 'Яйца', 40, True);
+INSERT INTO public.food_antitag (code, name, sort, is_active) VALUES ('SOY SAUCE', 'Соевый соус', 50, True);
+INSERT INTO public.food_antitag (code, name, sort, is_active) VALUES ('OLIVE OIL', 'Оливковое масло', 60, True);
+INSERT INTO public.food_antitag (code, name, sort, is_active) VALUES ('GLUTEN', 'Глютен', 70, True);
+INSERT INTO public.food_antitag (code, name, sort, is_active) VALUES ('HEMP', 'Конопля', 80, True);
+INSERT INTO public.food_antitag (code, name, sort, is_active) VALUES ('MUSTARD', 'Горчица', 90, True);
+INSERT INTO public.food_antitag (code, name, sort, is_active) VALUES ('PAPRIKA', 'Паприка', 100, True);
+INSERT INTO public.food_antitag (code, name, sort, is_active) VALUES ('DAIRY', 'Молочный', 110, True);
+INSERT INTO public.food_antitag (code, name, sort, is_active) VALUES ('HONEY', 'Мед', 120, True);
+
+INSERT INTO public.food_foodtag (food_id_id, tag_id_id) VALUES (1, 'MEAT');
+INSERT INTO public.food_foodtag (food_id_id, tag_id_id) VALUES (4, 'MEAT');
+INSERT INTO public.food_foodtag (food_id_id, tag_id_id) VALUES (7, 'MEAT');
+INSERT INTO public.food_foodtag (food_id_id, tag_id_id) VALUES (10, 'MEAT');
+INSERT INTO public.food_foodtag (food_id_id, tag_id_id) VALUES (13, 'MEAT');
+INSERT INTO public.food_foodtag (food_id_id, tag_id_id) VALUES (16, 'MEAT');
+INSERT INTO public.food_foodtag (food_id_id, tag_id_id) VALUES (19, 'MEAT');
+INSERT INTO public.food_foodtag (food_id_id, tag_id_id) VALUES (25, 'MEAT');
+INSERT INTO public.food_foodtag (food_id_id, tag_id_id) VALUES (31, 'MEAT');
+INSERT INTO public.food_foodtag (food_id_id, tag_id_id) VALUES (34, 'MEAT');
+INSERT INTO public.food_foodtag (food_id_id, tag_id_id) VALUES (2, 'SIDE_DISH');
+INSERT INTO public.food_foodtag (food_id_id, tag_id_id) VALUES (5, 'SIDE_DISH');
+INSERT INTO public.food_foodtag (food_id_id, tag_id_id) VALUES (8, 'SIDE_DISH');
+INSERT INTO public.food_foodtag (food_id_id, tag_id_id) VALUES (11, 'SIDE_DISH');
+INSERT INTO public.food_foodtag (food_id_id, tag_id_id) VALUES (14, 'SIDE_DISH');
+INSERT INTO public.food_foodtag (food_id_id, tag_id_id) VALUES (3, 'VEGETABLES');
+INSERT INTO public.food_foodtag (food_id_id, tag_id_id) VALUES (6, 'VEGETABLES');
+INSERT INTO public.food_foodtag (food_id_id, tag_id_id) VALUES (9, 'VEGETABLES');
+INSERT INTO public.food_foodtag (food_id_id, tag_id_id) VALUES (12, 'VEGETABLES');
+INSERT INTO public.food_foodtag (food_id_id, tag_id_id) VALUES (15, 'VEGETABLES');
+
+INSERT INTO public.food_foodantitag (food_id_id, antitag_id_id) VALUES (2, 'TURMERIC');
+INSERT INTO public.food_foodantitag (food_id_id, antitag_id_id) VALUES (1, 'SESAME SEEDS');
+INSERT INTO public.food_foodantitag (food_id_id, antitag_id_id) VALUES (4, 'OLIVE OIL');
+INSERT INTO public.food_foodantitag (food_id_id, antitag_id_id) VALUES (6, 'PAPRIKA');
+INSERT INTO public.food_foodantitag (food_id_id, antitag_id_id) VALUES (7, 'PAPRIKA');
+INSERT INTO public.food_foodantitag (food_id_id, antitag_id_id) VALUES (8, 'OLIVE OIL');
+INSERT INTO public.food_foodantitag (food_id_id, antitag_id_id) VALUES (11, 'WALNUTS');
+INSERT INTO public.food_foodantitag (food_id_id, antitag_id_id) VALUES (14, 'SOY SAUCE');
+INSERT INTO public.food_foodantitag (food_id_id, antitag_id_id) VALUES (18, 'WALNUTS');
+
 COMMIT;

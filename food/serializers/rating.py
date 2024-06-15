@@ -38,14 +38,7 @@ class RatingListSerializer(InfoModelSerializer):
             return representation
         else:
             pass
-            # representation = None
 
-        # print('list_attrs:', instance, food_id, instance.food_id.pk)
-
-
-    def validate(self, attrs):
-        print('list_attrs:', attrs)
-        return attrs
 
 class RatingRetrieveSerializer(InfoModelSerializer):
     food = FoodShortSerializer()
