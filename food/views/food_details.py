@@ -5,7 +5,8 @@ from common.views.mixins import LCRUViewSet
 
 
 @extend_schema_view(
-    list=extend_schema(summary='Список блюд', tags=['Блюда']),
+    list=extend_schema(summary='Список блюд (Тэги и антитэги указываются в параметрах запроса и разделяются символом %,'
+                               ' например: /api/food?tags=Мясо%Гарнир&antitags=Семена кунжута%Куркума%Паприка)', tags=['Блюда']),
     retrieve=extend_schema(summary='Блюдо детально', tags=['Блюда']),
     create=extend_schema(summary='Создать блюдо', tags=['Блюда']),
     update=extend_schema(summary='Изменить блюдо', tags=['Блюда']),
