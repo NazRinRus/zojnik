@@ -2,6 +2,7 @@ from drf_spectacular.utils import extend_schema_view, extend_schema
 from food.models.food_details import Food
 from food.serializers import food_details
 from common.views.mixins import LCRUViewSet
+from rest_framework.permissions import AllowAny, IsAuthenticated
 
 
 @extend_schema_view(
@@ -15,6 +16,7 @@ from common.views.mixins import LCRUViewSet
 class FoodView(LCRUViewSet):
     queryset = Food.objects.all()
     serializer_class = food_details.FoodCreateSerializer
+    permission_classes = [AllowAny]
 
     multi_serializer_class = {
         'list': food_details.FoodCreateSerializer,
