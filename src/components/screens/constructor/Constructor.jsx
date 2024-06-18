@@ -7,7 +7,7 @@ import Layout from '../../layout/Layout';
 const Constructor = () => {
 	return (
 		<Layout>
-			<Header title='Тарелка по Методу' />
+			<Header />
 			<Content />
 			<InterfaceApp />
 		</Layout>

@@ -1,11 +1,10 @@
-import { Link } from 'react-router-dom';
-
 import BurgerMenu from '../ui/burger-menu/BurgerMenu';
 
 import Geolocation from '../geolocation/Geolocation';
 
 import styles from './Header.module.scss';
 
+<<<<<<< HEAD
 const Header = ({ title }) => {
   return (
     <header className={styles.header}>
@@ -32,6 +31,16 @@ const Header = ({ title }) => {
       </>
     </header>
   );
+=======
+const Header = () => {
+	return (
+		<header className={styles.header}>
+			<img src='./test_logo.png' alt='image' className={styles.logo} />
+			<Geolocation />
+			<BurgerMenu />
+		</header>
+	);
+>>>>>>> f5e0d7b9ea415895783096675815dce4b0942346
 };
 
 export default Header;

@@ -1,6 +1,12 @@
 import { useState } from 'react';
 
+import Button from '../../ui/button/Button';
+import TitleAndBack from '../../ui/title-and-back/TitleAndBack';
+
+import { colors } from '../../../app.constants';
+
 import styles from './PlateConstructor.module.scss';
+import AddToOrder from './add-to-order/AddToOrder';
 
 const PlateConstructor = () => {
 	const [isSpinning, setIsSpinning] = useState(false);
@@ -9,11 +15,12 @@ const PlateConstructor = () => {
 		setIsSpinning(true);
 		setTimeout(() => {
 			setIsSpinning(false);
-		}, 2000); // Длительность анимации в миллисекундах
+		}, 600); // Длительность анимации в миллисекундах
 	};
 
 	return (
 		<div className={styles.wrapper_constructor}>
+			<TitleAndBack title='Тарелка по Методу' />
 			<div className={styles.block__reload}>
 				<img src='../icons/spin_the_plate.svg' alt='spin_the_plate' />
 				<button className={styles.button__reload} onClick={handleSpin}>
@@ -56,6 +63,15 @@ const PlateConstructor = () => {
 					Соберите в конструкторе свою <br></br> идеальную тарелку
 				</p>
 			</div>
+			<Button
+				style={{
+					back: colors.color_grey_disable,
+					color: colors.color_white,
+				}}
+			>
+				В корзину
+			</Button>
+			<AddToOrder />
 		</div>
 	);
 };

@@ -1,5 +1,6 @@
 @import '../../styles/variables';
 @import '../../styles/functions';
+@import '../../styles/fonts';
 
 .block__slider {
 	display: flex;
@@ -28,5 +29,18 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 	color: $color-black;
+
+	> img {
+		width: adapt(48px, 375px);
+		height: adapt(48px, 375px);
+	}
+
+	> p {
+		font-family: 'SF-Pro-Display-Regular';
+		font-size: 1rem;
+		text-align: center;
+		color: $color-green-standart;
+	}
 }

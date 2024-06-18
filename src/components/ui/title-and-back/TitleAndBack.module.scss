@@ -1,0 +1,14 @@
+@import '../../../styles/variables';
+@import '../../../styles/functions';
+@import '../../../styles/fonts';
+
+.block__titleAndBack {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.title {
+	font-size: 1.29rem;
+	font-family: 'SF-Pro-Display-Semibold';
+}

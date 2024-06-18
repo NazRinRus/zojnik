@@ -2,31 +2,26 @@ export const categoryFood = [
 	{
 		id: 1,
 		title: 'Салаты',
-		src: '',
+		src: './icons/slider/salads.svg',
 	},
 	{
 		id: 2,
 		title: 'Супы',
-		src: '',
+		src: './icons/slider/soups.svg',
 	},
 	{
 		id: 3,
 		title: 'Гарниры',
-		src: '',
+		src: './icons/slider/side_dishes.svg',
 	},
 	{
 		id: 4,
 		title: 'Белки',
-		src: '',
+		src: './icons/slider/proteins.svg',
 	},
 	{
 		id: 5,
-		title: '4124',
-		src: '',
-	},
-	{
-		id: 6,
-		title: '324',
-		src: '',
+		title: 'Десерты',
+		src: './icons/slider/dessert.svg',
 	},
 ];

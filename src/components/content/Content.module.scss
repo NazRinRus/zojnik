@@ -1,7 +1,5 @@
 @import '../../styles/functions';
 
 .block__content {
-	display: flex;
-	flex-direction: column;
-	gap: adapt(16px, 375px);
+	padding-bottom: adapt(100px, 375px);
 }
