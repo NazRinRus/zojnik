@@ -1,3 +1,4 @@
+import Authorization from '../components/screens/authorization/Authorization';
 import Constructor from '../components/screens/constructor/Constructor';
 import Home from '../components/screens/home/Home';
 import Profile from '../components/screens/profile/Profile';
@@ -24,6 +25,11 @@ export const routes = [
 	{
 		path: '/profile',
 		component: Profile,
+		isAuth: false,
+	},
+	{
+		path: '/authorization',
+		component: Authorization,
 		isAuth: false,
 	},
 	{

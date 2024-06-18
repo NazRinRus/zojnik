@@ -2,6 +2,20 @@
 @import '../../../styles/functions';
 @import '../../../styles/fonts';
 
+<<<<<<< HEAD
+.welcome__button__enter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-green-standart;
+  width: adapt(343px, 375px);
+  height: adapt(56px, 375px);
+  border-radius: adapt(16px, 375px);
+  color: #fff;
+  font-size: 1.0625rem;
+  font-weight: 590;
+  font-family: 'SF-Pro-Display-Semibold',sans-serif;
+=======
 .welcome__button {
 	display: flex;
 	align-items: center;
@@ -13,10 +27,20 @@
 	color: #fff;
 	font-size: 1.0625rem;
 	font-weight: 590;
+>>>>>>> f5e0d7b9ea415895783096675815dce4b0942346
 }
 
 .welcome__button:active {
 	background-color: $color-green-hover;
+}
+
+.welcome__button__miss {
+  display: flex;
+  justify-content: center;
+  font-size: 1.0625rem;
+  padding: adapt(16px, 375px) adapt(32px, 375px);
+  font-family: 'SF-Pro-Display-Regular', sans-serif;
+  color: $green-heading-text;
 }
 
 .welcome__background {
@@ -26,6 +50,22 @@
 }
 
 .welcome__heading {
+<<<<<<< HEAD
+  margin-top: adapt(15px, 375px);
+  font-family: 'SF-Pro-Display-Semibold',sans-serif;
+  font-size: 1.75rem;
+  color: $color-black-text;
+}
+
+.welcome__text {
+  font-family: 'SF-Pro-Display-Regular', sans-serif;
+  margin-bottom: adapt(20px, 375px);
+  margin-top: adapt(8px, 375px);
+  font-size: 1.0625rem;
+  color: $color-black-light;
+  line-height: adapt(23px, 375px);
+  width: adapt(340px, 375px);
+=======
 	margin-top: adapt(15px, 375px);
 	font-family: 'SF-Pro-Display-Semibold';
 	font-size: 1.75rem;
@@ -40,6 +80,7 @@
 	color: $color-black-light;
 	line-height: adapt(23px, 375px);
 	width: adapt(340px, 375px);
+>>>>>>> f5e0d7b9ea415895783096675815dce4b0942346
 }
 
 .welcome__link {

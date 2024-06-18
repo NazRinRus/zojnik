@@ -3,6 +3,7 @@
 @import '../../../styles/fonts';
 
 .block__input {
+  margin-top: adapt(8px, 375px);
 	width: 100%;
 	height: adapt(48px, 375px);
 	background-color: $color-green-light;
