@@ -1,0 +1,23 @@
+@import '../../../styles/variables';
+@import '../../../styles/functions';
+@import '../../../styles/fonts';
+
+.button__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 17px;
+  color: $color-black-text;
+  font-family: 'SF-Pro-Display-Regular', sans-serif;
+  border-radius: adapt(16px, 375px);
+  background-color: $color-grey-button;
+  padding: adapt(8px, 375px) 0 adapt(8px, 375px) adapt(8px, 375px);
+}
+
+.button__menu__text {
+  flex-grow: 1;
+}
+
+.button__profile__logout {
+  color: red;
+}

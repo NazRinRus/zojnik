@@ -1,3 +1,25 @@
 @import '../../../styles/variables';
 @import '../../../styles/functions';
+@import '../../../styles/fonts';
 
+.avatar__profile {
+  display: flex;
+  justify-content: center;
+}
+
+.avatar__profile__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: $color-green-standart;
+  width: adapt(80px, 375px);
+  height: adapt(80px, 375px);
+}
+
+.buttons__wrapper__profile {
+  padding: adapt(40px, 375px) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
