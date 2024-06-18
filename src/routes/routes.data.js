@@ -1,8 +1,9 @@
 import Constructor from '../components/screens/constructor/Constructor';
 import Home from '../components/screens/home/Home';
-import Welcome from '../components/screens/welcome/Welcome';
-
 import Profile from '../components/screens/profile/Profile';
+import Protein from '../components/screens/protein/Protein';
+import Salads from '../components/screens/salads/Salads';
+import Welcome from '../components/screens/welcome/Welcome';
 
 export const routes = [
 	{
@@ -20,9 +21,19 @@ export const routes = [
 		component: Constructor,
 		isAuth: false,
 	},
-  {
+	{
 		path: '/profile',
 		component: Profile,
+		isAuth: false,
+	},
+	{
+		path: '/salads',
+		component: Salads,
+		isAuth: false,
+	},
+	{
+		path: '/protein',
+		component: Protein,
 		isAuth: false,
 	},
 ];
