@@ -1,4 +1,4 @@
-import InputMask from 'react-input-mask';
+import { InputMask } from '@react-input/mask';
 import styles from './InputPhone.module.scss';
 
 const InputPhone = () => {
