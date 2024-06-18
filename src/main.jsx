@@ -5,8 +5,6 @@ import ReactDOM from 'react-dom/client';
 
 import Router from './routes/Router.jsx';
 import './styles/global.scss';
-<<<<<<< HEAD
-=======
 
 if ('serviceWorker' in navigator) {
 	window.addEventListener('load', () => {
@@ -20,7 +18,6 @@ if ('serviceWorker' in navigator) {
 			});
 	});
 }
->>>>>>> f5e0d7b9ea415895783096675815dce4b0942346
 
 const queryClient = new QueryClient();
 
