@@ -1,12 +1,10 @@
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Provider } from 'react-redux';
 
 import Router from './routes/Router.jsx';
-import { store } from './store/store.js';
 import './styles/global.scss';
-<<<<<<< HEAD
-=======
 
 if ('serviceWorker' in navigator) {
 	window.addEventListener('load', () => {
@@ -20,12 +18,14 @@ if ('serviceWorker' in navigator) {
 			});
 	});
 }
->>>>>>> f5e0d7b9ea415895783096675815dce4b0942346
+
+const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>
-		<Provider store={store}>
+		<QueryClientProvider client={queryClient}>
 			<Router />
-		</Provider>
+			<ReactQueryDevtools initialIsOpen={false} />
+		</QueryClientProvider>
 	</React.StrictMode>,
 );

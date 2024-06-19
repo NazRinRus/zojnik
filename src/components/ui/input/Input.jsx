@@ -17,8 +17,18 @@ const Input = () => {
 				value={inputValue}
 				onChange={e => setInputValue(e.target.value)}
 			/>
-			<button className={styles.button__voice} onClick={startVoiceRecognition}>
-				<img src='./icons/microphone.svg' alt='microphone' />
+			<button
+				className={styles.button__voice}
+				onClick={
+					inputValue !== '' ? () => setInputValue('') : startVoiceRecognition
+				}
+			>
+				<img
+					src={
+						inputValue === '' ? './icons/microphone.svg' : './icons/exit.svg'
+					}
+					alt='image'
+				/>
 			</button>
 		</div>
 	);

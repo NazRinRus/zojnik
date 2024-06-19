@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import Button from '../../ui/button/Button';
 import TitleAndBack from '../../ui/title-and-back/TitleAndBack';
@@ -32,9 +33,9 @@ const PlateConstructor = () => {
 				style={{ position: 'relative' }}
 			>
 				<div className={styles.block__left}>
-					<div className={styles.block__image}>
+					<Link to='/protein' className={styles.block__image}>
 						<img src='./icons/add.svg' alt='add' />
-					</div>
+					</Link>
 				</div>
 				<div
 					className={styles.block__right}
@@ -44,9 +45,12 @@ const PlateConstructor = () => {
 						top: '0',
 					}}
 				>
-					<div className={`${styles.block__image} ${styles.right}`}>
+					<Link
+						to='/salads'
+						className={`${styles.block__image} ${styles.right}`}
+					>
 						<img src='./icons/add.svg' alt='add' />
-					</div>
+					</Link>
 				</div>
 
 				{/* <img src='../image/plate_one.png' alt='plate' />
