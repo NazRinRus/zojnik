@@ -1,7 +1,7 @@
 import Layout from '../../layout/Layout';
 import Header from '../../header/Header';
 import InputPhone from '../../ui/input-phone/InputPhone';
-import ButtonAdd from '../../ui/button-add/ButtonAdd';
+import Buttons from '../../ui/buttons/Buttons';
 
 import styles from '../authorization/Authorization.module.scss';
 
@@ -23,8 +23,8 @@ const Authorization = () => {
             <p className={styles.authorization__agreement__text}>Соглашаюсь с Политикой конфеденциальности и Пользовательским соглашением</p>
           </div>
         </div>
-        <ButtonAdd
-          text='Получить код по SMS'
+        <Buttons
+          title='Получить код по SMS'
         />
       </div>
     </Layout>
