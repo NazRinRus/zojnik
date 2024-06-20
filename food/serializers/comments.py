@@ -16,28 +16,28 @@ class CommentShortSerializer(serializers.ModelSerializer):
             'user_id',
         )
 class CommentListSerializer(InfoModelSerializer):
-    food = FoodShortSerializer()
-    user = UserShortSerializer()
+    food_id = FoodShortSerializer()
+    user_id = UserShortSerializer()
 
     class Meta:
         model = FoodComment
         fields = (
             'id',
             'comment',
-            'user',
-            'food',
+            'food_id',
+            'user_id',
         )
 
 class CommentRetrieveSerializer(InfoModelSerializer):
-    food = FoodShortSerializer()
-    user = UserShortSerializer()
+    food_id = FoodShortSerializer()
+    user_id = UserShortSerializer()
     class Meta:
         model = FoodComment
         fields = (
             'id',
             'comment',
-            'user',
-            'food',
+            'food_id',
+            'user_id',
         )
 
 class CommentCreateSerializer(ExtendedModelSerializer):
@@ -50,6 +50,7 @@ class CommentCreateSerializer(ExtendedModelSerializer):
             'food_id',
             'user_id',
         )
+
 
 class CommentUpdateSerializer(ExtendedModelSerializer):
 

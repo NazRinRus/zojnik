@@ -21,18 +21,6 @@ class UserShortSerializer(serializers.ModelSerializer):
         )
 
 
-class UserEmployeeSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = User
-        fields = (
-            'id',
-            'username',
-            'full_name',
-            'email',
-            'phone_number',
-        )
-
 class RegistrationSerializer(serializers.ModelSerializer):
     email = serializers.EmailField()
     password = serializers.CharField(
