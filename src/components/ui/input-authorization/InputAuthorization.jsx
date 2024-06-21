@@ -1,9 +1,9 @@
-import { InputMask } from '@react-input/mask';
-import styles from './InputPhone.module.scss';
+import InputMask from 'react-input-mask';
+import styles from './InputAuthorization.module.scss';
 
-const InputPhone = () => {
+const InputAuthorization = () => {
 
-	return (
+  return (
     <div className={styles.input__block}>
       <label htmlFor="phone" className={styles.input__phone}>Телефон</label>
       <InputMask
@@ -12,7 +12,7 @@ const InputPhone = () => {
         className={styles.input__phone__add}
       />
     </div>
-	);
+  );
 };
 
-export default InputPhone;
+export default InputAuthorization;

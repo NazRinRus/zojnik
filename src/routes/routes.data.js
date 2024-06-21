@@ -6,6 +6,8 @@ import Protein from '../components/screens/protein/Protein';
 import Salads from '../components/screens/salads/Salads';
 import Welcome from '../components/screens/welcome/Welcome';
 
+import OpenBurgerMenu from '../components/open-burger/OpenBurger';
+
 export const routes = [
 	{
 		path: '/',
@@ -42,4 +44,9 @@ export const routes = [
 		component: Protein,
 		isAuth: false,
 	},
+  {
+		path: '/test',
+		component: OpenBurgerMenu,
+		isAuth: false,
+	}
 ];
