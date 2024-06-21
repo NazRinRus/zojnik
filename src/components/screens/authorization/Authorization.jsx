@@ -12,7 +12,7 @@ const Authorization = () => {
         title='Вход или регистрация'
       />
       <div className={styles.authorization}>
-        <p className={styles.authorization__text}>Для входа или регистрации укажите номер телефона</p>
+        <p className={styles.authorization__text}>Укажите email и пароль</p>
         <div className={styles.authorization__phone}>
           <InputAuthorization />
           <div className={styles.authorization__agreement}>
@@ -24,7 +24,7 @@ const Authorization = () => {
           </div>
         </div>
         <Buttons
-          title='Получить код по SMS'
+          title='Войти'
         />
       </div>
     </Layout>

@@ -5,7 +5,7 @@ import styles from './Buttons.module.scss';
 const Buttons = ({ id, path, leftIcon, rightIcon, title }) => {
   return (
     <>
-      {title === 'Получить код по SMS' ? (
+      {title === 'Войти' ? (
         <Link className={styles.button__add}>{title}</Link>
       ) : (
         <Link key={id} to={path} className={styles.button__menu}>
