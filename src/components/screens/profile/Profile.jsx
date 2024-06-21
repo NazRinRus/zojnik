@@ -1,7 +1,7 @@
 import Layout from '../../layout/Layout';
 import Header from '../../header/Header';
 import InterfaceApp from '../../ui/interface-app/InterfaceApp';
-import ButtonMenu from '../../ui/button-menu/ButtonMenu';
+import Buttons from '../../ui/buttons/Buttons';
 
 import { arrayButtonProfile } from '../../screens/profile/buttonsProfile.data';
 import styles from './Profile.module.scss';
@@ -18,7 +18,7 @@ const Profile = () => {
       </div>
       <div className={styles.buttons__wrapper__profile}>
         {arrayButtonProfile.map(button => (
-          <ButtonMenu
+          <Buttons
             key={button.id}
             id={button.id}
             path={button.path}
