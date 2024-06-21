@@ -10,6 +10,9 @@
 
 .block__methodPlate {
 	background-image: url('./image/plate_method.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	width: adapt(344px, 375px);
 	height: adapt(408px, 375px);
 	display: flex;

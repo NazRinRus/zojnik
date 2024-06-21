@@ -1,10 +1,24 @@
-import { $axios } from '../api';
+import axios from 'axios';
 
 export const foodService = {
 	getData: async () => {
-		const response = await $axios.get('/api/food/');
-		// const response = await fetch('https://api.dev.zojnikfood.ru/api/food/');
+		try {
+			// const response = await $axios.get('/food/'); TODO: РАЗОБРАТЬСЯ ПОЧЕМУ ПРИ ИМПОРТЕ СВОЕГО АПИ ЗАПРОС НЕ ПРОХОДИТ
 
-		return await response.data;
+			const response = await axios.get(
+				'https://api.dev.zojnikfood.ru/api/food/',
+				{
+					headers: {
+						'Content-Type': 'application/json',
+					},
+				},
+			);
+			// const response = await fetch('https://api.dev.zojnikfood.ru/api/food/');
+			console.log(response.data);
+			return await response.data;
+		} catch (error) {
+			console.log(error);
+			return null;
+		}
 	},
 };

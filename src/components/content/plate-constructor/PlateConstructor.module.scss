@@ -44,15 +44,15 @@
 		> .block__image {
 			width: adapt(80px, 375px);
 			margin-bottom: 5%;
-			margin-left: -5%;
+			margin-left: 2.5%;
 			align-self: end;
 			background-color: transparent;
 			position: relative;
 			z-index: 20;
 
 			> img {
-				width: adapt(80px, 375px);
-				height: adapt(80px, 375px);
+				width: adapt(50px, 375px);
+				height: adapt(50px, 375px);
 			}
 		}
 	}
@@ -69,7 +69,7 @@
 		> .block__image {
 			width: adapt(80px, 375px);
 			margin-bottom: 5%;
-			margin-right: -2.5%;
+			margin-right: -4.5%;
 			align-self: end;
 			justify-self: flex-end;
 			background-color: transparent;
@@ -77,11 +77,16 @@
 			z-index: 21;
 
 			> img {
-				width: adapt(80px, 375px);
-				height: adapt(80px, 375px);
+				width: adapt(50px, 375px);
+				height: adapt(50px, 375px);
 			}
 		}
 	}
+}
+
+.food {
+	width: 100%;
+	height: adapt(340px, 375px);
 }
 
 .spin {
@@ -94,4 +99,17 @@
 	left: 15%;
 	text-align: center;
 	color: $color-black-light;
+}
+
+.block__aboutFood {
+	display: flex;
+	flex-direction: column;
+	gap: adapt(25px, 375px);
+	width: 100%;
+}
+
+.block__plates {
+	display: flex;
+	gap: adapt(16px, 375px);
+	width: 100%;
 }

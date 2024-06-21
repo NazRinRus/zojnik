@@ -14,4 +14,8 @@ export const colors = {
 	color_grey_button: 'rgb(242, 242, 242)',
 	color_grey_disable: '#A3A7A4',
 	color_white: '#fff',
+	color_yellow: '#F2DA0A',
+	color_green: '#8EC647',
+	color_red: '#CB3128',
+	color_for_dish: '#f4fbfa',
 };

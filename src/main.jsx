@@ -3,6 +3,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+import PlateProvider from './providers/PlateProvider.jsx';
 import Router from './routes/Router.jsx';
 import './styles/global.scss';
 
@@ -24,7 +25,9 @@ const queryClient = new QueryClient();
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>
 		<QueryClientProvider client={queryClient}>
-			<Router />
+			<PlateProvider>
+				<Router />
+			</PlateProvider>
 			<ReactQueryDevtools initialIsOpen={false} />
 		</QueryClientProvider>
 	</React.StrictMode>,

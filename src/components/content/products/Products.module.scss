@@ -7,3 +7,9 @@
 	flex-direction: column;
 	gap: adapt(16px, 375px);
 }
+
+.block__products {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: adapt(15px, 375px);
+}
