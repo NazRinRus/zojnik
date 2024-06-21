@@ -1,7 +1,9 @@
 from django.db import models
+
+from common.models.mixins import InfoMixin
 from food.models import food_details
 
-class Plate(models.Model):
+class Plate(InfoMixin):
     proteinproduct = models.ForeignKey(
         food_details.Food, models.RESTRICT, 'plate_protein', verbose_name='Протеиновое блюдо', null=True
     )
