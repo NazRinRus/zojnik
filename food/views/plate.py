@@ -1,7 +1,7 @@
 from drf_spectacular.utils import extend_schema_view, extend_schema
 from rest_framework import generics
 from rest_framework.mixins import ListModelMixin
-from django.db.models import Count, OuterRef, Sum, F
+from django.db.models import Count, OuterRef, Sum, F, Q
 from food.models.plate import Plate
 from food.serializers import plate
 from common.views.mixins import LCRUViewSet, LCRUDViewSet, ExtendedCRUAPIView, ExtendedGenericViewSet
@@ -21,7 +21,7 @@ class PlateView(LCRUViewSet):
     permission_classes = [AllowAny]
 
     multi_serializer_class = {
-        'list': plate.PlateCreateSerializer,
+        'list': plate.PlateListSerializer,
         'retrieve': plate.PlateRetrieveSerializer,
         'create': plate.PlateCreateSerializer,
         'update': plate.PlateUpdateSerializer,
@@ -40,6 +40,8 @@ class PlateView(LCRUViewSet):
             total_protein=F('proteinproduct__protein') + F('garnishproduct__protein') + F('vegetableproduct__protein'),
             total_fat=F('proteinproduct__fat') + F('garnishproduct__fat') + F('vegetableproduct__fat'),
             total_carbohydrates=F('proteinproduct__carbohydrates') + F('garnishproduct__carbohydrates') + F('vegetableproduct__carbohydrates'),
+            allergen= Q(proteinproduct__allergen=True)|Q(garnishproduct__allergen=True)|Q(vegetableproduct__allergen=True),
+            total_price=F('proteinproduct__price') + F('garnishproduct__price') + F('vegetableproduct__price'),
         )
         return qs
 
