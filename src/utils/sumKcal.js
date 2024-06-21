@@ -2,7 +2,7 @@ export const sumKcalFunc = (title, data) => {
 	if (title === 'Ккал') {
 		let sum = 0;
 
-		if (data && data.right && data.left) {
+		if ((data && data.right) || data.left) {
 			for (let food of Object.values(data)) {
 				sum += food.calories;
 			}
@@ -11,7 +11,7 @@ export const sumKcalFunc = (title, data) => {
 	} else if (title === 'Белки') {
 		let sum = 0;
 
-		if (data && data.right && data.left) {
+		if ((data && data.right) || data.left) {
 			for (let food of Object.values(data)) {
 				sum += food.protein;
 			}
@@ -20,7 +20,7 @@ export const sumKcalFunc = (title, data) => {
 	} else if (title === 'Жиры') {
 		let sum = 0;
 
-		if (data && data.right && data.left) {
+		if ((data && data.right) || data.left) {
 			for (let food of Object.values(data)) {
 				sum += food.fat;
 			}
@@ -29,7 +29,7 @@ export const sumKcalFunc = (title, data) => {
 	} else if (title === 'Углеводы') {
 		let sum = 0;
 
-		if (data && data.right && data.left) {
+		if ((data && data.right) || data.left) {
 			for (let food of Object.values(data)) {
 				sum += food.carbohydrates;
 			}
@@ -38,7 +38,7 @@ export const sumKcalFunc = (title, data) => {
 	} else if (title === 'Цена') {
 		let sum = 0;
 
-		if (data && data.right && data.left) {
+		if ((data && data.right) || data.left) {
 			for (let food of Object.values(data)) {
 				sum += food.price === null ? 0 : food.price;
 			}

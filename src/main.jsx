@@ -3,6 +3,8 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+import BasketProvider from './providers/BasketProvider.jsx';
+import BurgerProvider from './providers/BurgerProvider.jsx';
 import PlateProvider from './providers/PlateProvider.jsx';
 import Router from './routes/Router.jsx';
 import './styles/global.scss';
@@ -25,9 +27,13 @@ const queryClient = new QueryClient();
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>
 		<QueryClientProvider client={queryClient}>
-			<PlateProvider>
-				<Router />
-			</PlateProvider>
+			<BurgerProvider>
+				<BasketProvider>
+					<PlateProvider>
+						<Router />
+					</PlateProvider>
+				</BasketProvider>
+			</BurgerProvider>
 			<ReactQueryDevtools initialIsOpen={false} />
 		</QueryClientProvider>
 	</React.StrictMode>,

@@ -6,16 +6,15 @@ import Content from '../../content/Content';
 import Header from '../../header/Header';
 import Layout from '../../layout/Layout';
 
-const Salads = () => {
+const Basket = () => {
 	const { isBurger } = useBurger();
 	return (
 		<Layout>
 			<Header />
 			<Content />
-			{/* <InterfaceApp /> */}
 			{!isBurger && <InterfaceApp />}
 		</Layout>
 	);
 };
 
-export default Salads;
+export default Basket;

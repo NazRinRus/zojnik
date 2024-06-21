@@ -7,7 +7,9 @@ const TitleAndBack = ({ title }) => {
 
 	return (
 		<div className={styles.block__titleAndBack}>
-			{title === 'Салаты' || title === 'Белки и углеводы' ? (
+			{title === 'Салаты' ||
+			title === 'Белки и углеводы' ||
+			title === 'Корзина' ? (
 				<button onClick={() => navigate(-1)}>{'<'}</button>
 			) : (
 				<Link to='/'>{'<'}</Link>

@@ -19,6 +19,8 @@ const PlateConstructor = () => {
 	const [isSpinning, setIsSpinning] = useState(false);
 	const { dataInPlate, setDataInPlate } = usePlateData();
 	const isPlate = dataInPlate.left !== null || dataInPlate.right !== null;
+	const isLocalStorage =
+		localStorage.getItem('left') || localStorage.getItem('right');
 	const { data, isSuccess } = useFoods();
 
 	const getRandomData = data => {
@@ -122,7 +124,7 @@ const PlateConstructor = () => {
 					</Link>
 				</div>
 
-				{!isPlate ? null : (
+				{isLocalStorage ? null : (
 					<p className={styles.help}>
 						Соберите в конструкторе свою <br></br> идеальную тарелку
 					</p>
@@ -133,16 +135,18 @@ const PlateConstructor = () => {
 					{dataInPlate.left && <AboutFood side='left' />}
 					{dataInPlate.right && <AboutFood side='right' />}
 				</div>
-				<AllData />
+				{isLocalStorage && <AllData />}
 			</div>
 
 			<Button
 				style={{
-					back: isPlate ? colors.color_black : colors.color_grey_disable,
+					back: isLocalStorage ? colors.color_black : colors.color_grey_disable,
 					color: colors.color_white,
 				}}
+				buttonFor='go-basket'
 			>
-				В корзину {isPlate ? `за ${sumKcalFunc('Цена', dataInPlate)} ₽` : ''}
+				В корзину{' '}
+				{isLocalStorage ? `за ${sumKcalFunc('Цена', dataInPlate)} ₽` : ''}
 			</Button>
 			<AddToOrder />
 		</div>
