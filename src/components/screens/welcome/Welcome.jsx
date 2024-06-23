@@ -20,7 +20,7 @@ const Welcome = () => {
 				<Link className={styles.welcome__link}>АНКЕТУ ПРЕДПОЧТЕНИЙ,</Link> чтобы
 				получить подборку блюд, идеально подходящих для вас
 			</p>
-			<Link to='/profile' className={styles.welcome__button__enter}>
+			<Link to='/authorization' className={styles.welcome__button__enter}>
 				Войти
 			</Link>
 			<Link to='/home' className={styles.welcome__button__miss}>
