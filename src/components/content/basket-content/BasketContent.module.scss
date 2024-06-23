@@ -45,3 +45,66 @@
 		font-family: 'SF-Pro-Display-Semibold';
 	}
 }
+
+.wrapper_basketProducts {
+	display: flex;
+	flex-direction: column;
+
+	> .button__delete {
+		align-self: flex-end;
+		margin-top: adapt(8px, 375px);
+		background-color: transparent;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	> .block__basket {
+		display: flex;
+		flex-direction: column;
+		gap: adapt(16px, 375px);
+		margin-bottom: adapt(25px, 375px);
+		margin-top: adapt(20px, 375px);
+	}
+
+	> .block__totalPrice {
+		margin-top: adapt(17px, 375px);
+		margin-bottom: adapt(24px, 375px);
+		color: $color_full_black;
+		font-family: 'SF-Pro-Display-Semibold';
+		display: flex;
+		flex-direction: column;
+		gap: adapt(8px, 375px);
+
+		> .title {
+			font-size: 1.17rem;
+		}
+
+		> .totalPrice__description {
+			> .row__count {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				font-size: 1rem;
+
+				> .title__count {
+					font-family: 'SF-Pro-Display-Regular';
+				}
+				> .count__price {
+				}
+			}
+			> .row__total {
+				margin-top: adapt(16px, 375px);
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				> .title__total {
+				}
+				> .total__price {
+				}
+			}
+		}
+	}
+}

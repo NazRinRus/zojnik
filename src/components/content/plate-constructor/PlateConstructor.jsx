@@ -48,7 +48,7 @@ const PlateConstructor = () => {
 		}, 600); // Длительность анимации в миллисекундах
 	};
 
-	console.log(data);
+	// console.log(data);
 
 	console.log(dataInPlate);
 	return (
@@ -144,6 +144,7 @@ const PlateConstructor = () => {
 					color: colors.color_white,
 				}}
 				buttonFor='go-basket'
+				isDisable={!isLocalStorage}
 			>
 				В корзину{' '}
 				{isLocalStorage ? `за ${sumKcalFunc('Цена', dataInPlate)} ₽` : ''}

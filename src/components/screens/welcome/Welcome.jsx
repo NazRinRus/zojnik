@@ -16,12 +16,14 @@ const Welcome = () => {
 				Начните свой ЗОЖ-путь сегодня!
 			</h1>
 			<p className={styles.welcome__text}>
-				Заполните <Link className={styles.welcome__link}>АНКЕТУ ПРЕДПОЧТЕНИЙ,</Link> чтобы получить подборку блюд, идеально подходящих для вас
+				Заполните{' '}
+				<Link className={styles.welcome__link}>АНКЕТУ ПРЕДПОЧТЕНИЙ,</Link> чтобы
+				получить подборку блюд, идеально подходящих для вас
 			</p>
-      <Link to='/profile' className={styles.welcome__button__enter}>
-        Войти
-      </Link>
-      <Link to='/' className={styles.welcome__button__miss}>
+			<Link to='/profile' className={styles.welcome__button__enter}>
+				Войти
+			</Link>
+			<Link to='/home' className={styles.welcome__button__miss}>
 				Пропустить
 			</Link>
 		</Layout>

@@ -9,12 +9,12 @@ import Welcome from '../components/screens/welcome/Welcome';
 
 export const routes = [
 	{
-		path: '/',
+		path: '/home',
 		component: Home,
 		isAuth: false,
 	},
 	{
-		path: '/welcome',
+		path: '/',
 		component: Welcome,
 		isAuth: false,
 	},

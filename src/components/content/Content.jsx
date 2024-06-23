@@ -16,7 +16,7 @@ const Content = () => {
 
 	return (
 		<div className={styles.block__content}>
-			{pathname === '/' ? (
+			{pathname === '/home' ? (
 				<HomePage />
 			) : pathname === '/salads' ? (
 				<Products title='Салаты' />

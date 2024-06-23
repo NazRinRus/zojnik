@@ -12,7 +12,7 @@ const TitleAndBack = ({ title }) => {
 			title === 'Корзина' ? (
 				<button onClick={() => navigate(-1)}>{'<'}</button>
 			) : (
-				<Link to='/'>{'<'}</Link>
+				<Link to='/home'>{'<'}</Link>
 			)}
 			<h1 className={styles.title}>{title}</h1>
 			<div></div>

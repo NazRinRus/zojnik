@@ -1,7 +1,7 @@
 export const arrayInterfaceApp = [
 	{
 		id: 1,
-		path: '/',
+		path: '/home',
 		src: './icons/interface_app/home.svg',
 		src_active: './icons/interface_app/home_active.svg',
 	},

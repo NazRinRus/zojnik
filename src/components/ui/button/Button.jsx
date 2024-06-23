@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 
 import styles from './Button.module.scss';
 
-const Button = ({ children, style, buttonFor }) => {
+const Button = ({ children, style, buttonFor, isDisable }) => {
 	const navigate = useNavigate();
 	const styleButton = {
 		backgroundColor: style.back,
@@ -15,6 +15,7 @@ const Button = ({ children, style, buttonFor }) => {
 
 	return (
 		<button
+			disabled={isDisable}
 			className={styles.button}
 			style={styleButton}
 			onClick={() => (buttonFor === 'go-basket' ? onClick() : undefined)}

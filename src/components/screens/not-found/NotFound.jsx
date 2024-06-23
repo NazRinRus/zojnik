@@ -22,7 +22,7 @@ const NotFound = () => {
 				<img src='./404.png' alt='404' className={styles.image} />
 				<h2 className={styles.title}>Что-то пошло не так</h2>
 				<p className={styles.error}>Произошла непредвиденная ошибка</p>
-				<Link to='/' className={styles.link}>
+				<Link to='/home' className={styles.link}>
 					На главную
 				</Link>
 			</div>

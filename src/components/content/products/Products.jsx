@@ -10,7 +10,7 @@ import styles from './Products.module.scss';
 const Products = ({ title }) => {
 	const { data, isSuccess } = useFoods();
 
-	console.log(data);
+	// console.log(data);
 
 	return (
 		<div className={styles.wrapper_product}>
