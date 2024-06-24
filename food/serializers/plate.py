@@ -25,6 +25,7 @@ class PlateListSerializer(InfoModelSerializer):
     total_carbohydrates = serializers.FloatField()
     allergen = serializers.BooleanField()
     total_price = serializers.FloatField()
+    total_rating = serializers.FloatField()
     class Meta:
         model = Plate
         fields = (
@@ -38,6 +39,7 @@ class PlateListSerializer(InfoModelSerializer):
             'total_carbohydrates',
             'allergen',
             'total_price',
+            'total_rating',
         )
 
 class PlateRetrieveSerializer(InfoModelSerializer):
@@ -50,6 +52,7 @@ class PlateRetrieveSerializer(InfoModelSerializer):
     proteinproduct = FoodShortSerializer()
     garnishproduct = FoodShortSerializer()
     vegetableproduct = FoodShortSerializer()
+    total_rating = serializers.FloatField()
 
     class Meta:
         model = Plate
@@ -64,6 +67,7 @@ class PlateRetrieveSerializer(InfoModelSerializer):
             'total_carbohydrates',
             'allergen',
             'total_price',
+            'total_rating',
         )
 
 class PlateCreateSerializer(ExtendedModelSerializer):
