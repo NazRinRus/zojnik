@@ -189,4 +189,6 @@ INSERT INTO public.food_foodantitag (food_id_id, antitag_id_id) VALUES (11, 'WAL
 INSERT INTO public.food_foodantitag (food_id_id, antitag_id_id) VALUES (14, 'SOY SAUCE');
 INSERT INTO public.food_foodantitag (food_id_id, antitag_id_id) VALUES (18, 'WALNUTS');
 
+UPDATE public.food_food SET price = ROUND((RANDOM()*(500-250)+250)::numeric, 2);
+
 COMMIT;

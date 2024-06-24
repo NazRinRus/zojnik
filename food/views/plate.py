@@ -42,6 +42,7 @@ class PlateView(LCRUViewSet):
             total_carbohydrates=F('proteinproduct__carbohydrates') + F('garnishproduct__carbohydrates') + F('vegetableproduct__carbohydrates'),
             allergen= Q(proteinproduct__allergen=True)|Q(garnishproduct__allergen=True)|Q(vegetableproduct__allergen=True),
             total_price=F('proteinproduct__price') + F('garnishproduct__price') + F('vegetableproduct__price'),
+            total_rating=(F('proteinproduct__rating') + F('garnishproduct__rating') + F('vegetableproduct__rating'))/3,
         )
         return qs
 
