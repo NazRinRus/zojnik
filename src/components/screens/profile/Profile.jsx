@@ -11,6 +11,11 @@ const Profile = () => {
   return (
     <Layout>
       <Header />
+      <div className={styles.header__profile}>
+        <img src="/icons/arrow left.svg" alt="arrow" />
+        <h1 className={styles.header__title}>Профиль</h1>
+        <img src="/icons/profile/settings.svg" alt="settings" />
+      </div>
       <div className={styles.avatar__profile}>
         <div className={styles.avatar__profile__image}>
           <img src="/icons/profile/avatar.svg" alt="avatar" />
